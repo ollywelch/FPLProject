@@ -15,7 +15,7 @@
   - main.py - implements main data modelling functionality, creating predictions based on the data collected using scikit-learn
   - custom_regressor.py - implements hurdle regression, combining logistic regression to predict if a player will play, followed by random forest regression to predict the score given they do play.
 
-### Data Pipeline
+## Data Pipeline
 
 - Get data from bootstrap-static
 - Update data in events, teams, and element-types tables
@@ -27,7 +27,13 @@
   - Merge this data with bootstrap data
   - Add as row to database. If more than one fixture - add as a separate row 
   with different opposition data and blank previous game information
-    
+  
+  
+## Data Analysis
+
+A notebook analysing the dataset and creating the model implemented in DataModel can be found [here](https://www.kaggle.com/ollywelch/fpl-data-analysis/)
+
+A subset of the dataset can be found [here](https://www.kaggle.com/ollywelch/fpl-dataset)
 
   
   
