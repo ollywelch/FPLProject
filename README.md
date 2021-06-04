@@ -1,35 +1,19 @@
-# FPL Project Plan
+# FPL Project
 
-## To Do
+## Project Structure
 
-- Implement data collection in Python
-  - Plan project structure
-  - Collect as much data as possible from API
-  - Test and implement
-- Deploy data collector
-  - Deploy local SQL database
-  - Deploy Python code locally with Docker - look to migrate to AWS
-- Model data
-  - Collect data from database
-  - Train model
-  - Get predictions
-- Deploy data model
-- Iterate previous steps
-  - Streamline data collection process
-  - Model driven development
-  - Collect only important features - add in more features where necessary
+- ### DataCollector
 
-## Python Data Collector
-
-### Project Structure
-
-- ### FPL
-
-  - main.py - implements main data collecting functionality
+  - main.py - implements main data collecting functionality using data pipeline detailed below
 
   - player.py - Player class, collects required data from element summary API
   
   - bootstrap.py - Bootstrap class, methods to collect required data from bootstrap-static API
+
+- ### DataModel
+
+  - main.py - implements main data modelling functionality, creating predictions based on the data collected using scikit-learn
+  - custom_regressor.py - implements hurdle regression, combining logistic regression to predict if a player will play, followed by random forest regression to predict the score given they do play.
 
 ### Data Pipeline
 
